@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "Yangın İhbar Sistemi",
+    "slug": "yisis_app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logos/FullLogoOrg.png",
+    "scheme": "yisisapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Konumunuzu uygulama açıkken kullanmamıza izin verin.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Konumunuzu uygulama açıkken ve arka planda kullanmamıza izin verin."
+      },
+      "splash": {
+        "image": "./assets/logos/FullLogoOrg.png",
+        "resizeMode": "contain"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logos/FullLogoOrg.png",
+        "backgroundColor": "#ffffff",
+        "monochromeImage": "./assets/logos/FullLogoOrg.png"
+      },
+      "icon": "./assets/logos/FullLogoOrg.png",
+      "edgeToEdgeEnabled": true,
+      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION"],
+      "package": "com.yourcompany.yisisapp"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/logored.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/fullLogo.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Konumunuzu, uygulama açıkken ve arka planda kullanmamıza izin verin.",
+          "locationWhenInUsePermission": "Konumunuzu, uygulama açıkken kullanmamıza izin verin."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Uygulamamızın kameranıza erişmesine izin verin!",
+          "microphonePermission": "Uygulamamızın mikrofonunuza erişmesine izin verin!",
+          "recordAudioAndroid": true
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
